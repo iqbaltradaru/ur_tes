@@ -11,9 +11,11 @@ class CartProvider extends ChangeNotifier {
     _counterCart = _listCart.length;
     notifyListeners();
   }
-  cartData(){
+
+  cartData() {
     return _listCart;
   }
+
   Widget cartCounter() {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20),
@@ -32,28 +34,28 @@ class CartProvider extends ChangeNotifier {
                   }),
               _counterCart > 0
                   ? new Positioned(
-                right: 11,
-                top: 11,
-                child: new Container(
-                  padding: EdgeInsets.all(2),
-                  decoration: new BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  constraints: BoxConstraints(
-                    minWidth: 14,
-                    minHeight: 14,
-                  ),
-                  child: Text(
-                    '$_counterCart',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 8,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              )
+                      right: 11,
+                      top: 11,
+                      child: new Container(
+                        padding: EdgeInsets.all(2),
+                        decoration: new BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        constraints: BoxConstraints(
+                          minWidth: 14,
+                          minHeight: 14,
+                        ),
+                        child: Text(
+                          '$_counterCart',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 8,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    )
                   : new Container()
             ],
           ),
